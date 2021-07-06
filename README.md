@@ -53,6 +53,9 @@ Test installation:
 		$ g++ read_image.cpp -o app `pkg-config --cflags --libs opencv`
 		$ ./app 
 	
+		$ g++ read_video.cpp -o app `pkg-config --cflags --libs opencv`
+		$ ./app
+	
 <img src="results/test_cplusplus.png?raw=true" width="600" height = "200"/>
 
 	Test opencv on python3:
