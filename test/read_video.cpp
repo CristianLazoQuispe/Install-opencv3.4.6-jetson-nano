@@ -2,14 +2,13 @@
 #include <iostream>
 
 using namespace std;
-using namespace cv;
 
 int main(){
 
   // Create a VideoCapture object and open the input file
   // If the input is the web camera, pass 0 instead of the video file name
   string filename = "filesrc location=video.mp4 ! qtdemux ! queue ! h264parse ! omxh264dec ! nvvidconv ! video/x-raw,format=BGRx ! queue ! videoconvert ! queue ! video/x-raw, format=BGR ! appsink";
-  VideoCapture cap(filename, CAP_GSTREAMER); 
+  cv::VideoCapture cap(filename, cv::CAP_GSTREAMER); 
    
   // Check if camera opened successfully
   if(!cap.isOpened()){
@@ -19,7 +18,7 @@ int main(){
 	
   while(1){
 
-    Mat frame;
+    cv::Mat frame;
     // Capture frame-by-frame
     cap >> frame;
  
@@ -28,10 +27,10 @@ int main(){
       break;
 
     // Display the resulting frame
-    imshow( "Frame", frame );
+    cv::imshow( "Frame", frame );
 
     // Press  ESC on keyboard to exit
-    char c=(char) waitKey(25);
+    char c=(char) cv::waitKey(25);
     if(c==27)
       break;
   }
@@ -40,7 +39,7 @@ int main(){
   cap.release();
 
   // Closes all the frames
-  destroyAllWindows();
+  cv::destroyAllWindows();
 	
   return 0;
 }

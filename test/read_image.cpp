@@ -2,7 +2,6 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
-using namespace cv;
 using namespace std;
 
 // Driver code
@@ -10,7 +9,7 @@ int main(int argc, char** argv)
 {
 	// Read the image file as
 	// imread("default.jpg");
-	Mat image = imread("download.jpeg",IMREAD_GRAYSCALE);
+	cv::Mat image = imread("download.jpeg",cv::IMREAD_GRAYSCALE);
 
 	// Error Handling
 	if (image.empty()) {
@@ -22,10 +21,10 @@ int main(int argc, char** argv)
 
 	// Show Image inside a window with
 	// the name provided
-	imshow("Window Name", image);
+	cv::imshow("Window Name", image);
 
 	// Wait for any keystroke
-	waitKey(0);
+	cv::waitKey(0);
 	return 0;
 }
 
