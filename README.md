@@ -14,7 +14,7 @@ Once the above is working, add the following line into /etc/fstab and reboot the
 		/mnt/8GB.swap  none  swap  sw 0  0
 Example fstab:
 
-		<img src="src/fstab_example.png?raw=true" width="600" height = "200"/>
+<img src="src/fstab_example.png?raw=true" width="600" height = "200"/>
 
 reboot
 		$ sudo reboot now
