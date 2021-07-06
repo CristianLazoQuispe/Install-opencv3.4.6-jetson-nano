@@ -14,7 +14,7 @@ Once the above is working, add the following line into /etc/fstab and reboot the
 		/mnt/8GB.swap  none  swap  sw 0  0
 Example fstab:
 
-	<img src="scripts/fstab.png?raw=true" width="600" height = "200"/>
+<img src="scripts/fstab.png?raw=true" width="600" height = "200"/>
 
 reboot
 
@@ -51,13 +51,13 @@ Test installation:
 		$ g++ read_image.cpp -o app `pkg-config --cflags --libs opencv`
 		$ ./app 
 	
-	<img src="results/test_cplusplus.png?raw=true" width="600" height = "200"/>
+<img src="results/test_cplusplus.png?raw=true" width="600" height = "200"/>
 
 	Test opencv on python3:
 
 		$ python3 read_image.py 
 
-	<img src="results/test_python3.png?raw=true" width="600" height = "200"/>
+<img src="results/test_python3.png?raw=true" width="600" height = "200"/>
 
 
 
