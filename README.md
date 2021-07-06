@@ -46,6 +46,8 @@ Install opencv
 
 Test installation:
 
+		$ cd ../test/
+
 	Test opencv on c++ :
 
 		$ g++ read_image.cpp -o app `pkg-config --cflags --libs opencv`
