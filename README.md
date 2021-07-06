@@ -39,6 +39,6 @@ Install protobuf
 
 		$ ./install_protobuf-3.6.1.sh
 
-Install protobuf
+Install opencv
 
 		$ ./install_opencv-3.4.6.sh
