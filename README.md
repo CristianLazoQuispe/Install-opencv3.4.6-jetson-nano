@@ -12,6 +12,8 @@ Since memory (4GB) on the Jetson Nano is rather limited, I’d create and mount 
 Once the above is working, add the following line into /etc/fstab and reboot the system. Make sure the swap space gets mounted automatically after reboot.
 
 		/mnt/8GB.swap  none  swap  sw 0  0
+reboot
+		$ sudo reboot now
 
 After the reboot, clone the repository:
 
