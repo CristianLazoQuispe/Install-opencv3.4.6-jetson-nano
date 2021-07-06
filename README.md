@@ -17,6 +17,7 @@ Example fstab:
 <img src="scripts/fstab.png?raw=true" width="600" height = "200"/>
 
 reboot
+
 		$ sudo reboot now
 
 After the reboot, clone the repository:
