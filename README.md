@@ -63,10 +63,11 @@ The lines #62~#68 of ```cuda_gl_interop.h```. They look like after the modificat
 	#include <GL/gl.h>
 	//#endif
 
-
 Then:
+
 		$ cd /usr/lib/aarch64-linux-gnu/
 		$ sudo ln -sf tegra/libGL.so libGL.so
+
 
 
 Finally, you should download and install opencv-3.4.0 again
@@ -76,10 +77,7 @@ Finally, you should download and install opencv-3.4.0 again
 
 If you get an error with libGL.so:
 		```
-		Built target pch_Generate_opencv_stitching
-		Scanning dependencies of target opencv_cudev
-		make[2]: *** No rule to make target '/usr/lib/aarch64-linux-gnu/libGL.so', needed by 'lib/libopencv_cudev.so.3.4.6'. Stop.
-		make[2]: *** Waiting for unfinished jobs....
+		Built target pch_Generate_opencv_stitching Scanning dependencies of target opencv_cudev make[2]: *** No rule to make target '/usr/lib/aarch64-linux-gnu/libGL.so', needed by 'lib/libopencv_cudev.so.3.4.6'. Stop. make[2]: *** Waiting for unfinished jobs....
 		```
 	
 The error message says that make is not able to find the file ```/usr/lib/aarch64-linux-gnu/libGL.so```. Check if there is a ```/usr/lib/aarch64-linux-gnu/libGL.so.1.0.0``` on your Jetson Nano. If yes, you should be able to fix the problem by creating a symbolic link:
