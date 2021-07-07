@@ -43,6 +43,18 @@ Install opencv
 
 		$ ./install_opencv-3.4.6.sh
 
+### Note: 
+If you have the following errors:
+		```
+		/usr/local/cuda-8.0/include/cuda_gl_interop.h:64:2: error: #error Please include the appropriate gl headers before including cuda_gl_interop.h
+		#error Please include the appropriate gl headers before including cuda_gl_interop.h
+		```
+		```
+		Built target pch_Generate_opencv_stitching
+		Scanning dependencies of target opencv_cudev
+		make[2]: *** No rule to make target '/usr/lib/aarch64-linux-gnu/libGL.so', needed by 'lib/libopencv_cudev.so.3.4.6'. Stop.
+		make[2]: *** Waiting for unfinished jobs....
+		```
 
 Test installation:
 
