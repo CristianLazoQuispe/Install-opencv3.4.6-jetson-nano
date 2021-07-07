@@ -63,9 +63,11 @@ The lines #62~#68 of ```cuda_gl_interop.h```. They look like after the modificat
 	#include <GL/gl.h>
 	//#endif
 
+
 Then:
 		$ cd /usr/lib/aarch64-linux-gnu/
 		$ sudo ln -sf tegra/libGL.so libGL.so
+
 
 Finally, you should download and install opencv-3.4.0 again
 		$ ./install_opencv-3.4.6.sh
