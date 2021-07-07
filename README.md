@@ -43,8 +43,36 @@ Install opencv
 
 		$ ./install_opencv-3.4.6.sh
 
+
+Test installation:
+
+		$ cd ../test/
+
+	Test opencv on c++ :
+
+		$ g++ read_image.cpp -o app `pkg-config --cflags --libs opencv`
+		$ ./app 
+	
+<img src="results/test_cplusplus.png?raw=true" width="600" height = "200"/>
+
+		$ g++ read_video.cpp -o app `pkg-config --cflags --libs opencv`
+		$ ./app
+	
+<img src="results/result_video_cplus_clpus.png?raw=true" width="600" height = "200"/>
+
+	Test opencv on python3:
+
+		$ python3 read_image.py 
+
+<img src="results/test_python3.png?raw=true" width="600" height = "200"/>
+
+		$ python3 read_video.py 
+
+<img src="results/result_video_python.png?raw=true" width="600" height = "200"/>
+
+	
 ### Note 
-If you get an error with cuda_gl_interop.h:
+#### If you get an error with cuda_gl_interop.h:
 
 		
 		/usr/local/cuda-8.0/include/cuda_gl_interop.h:64:2: error: 
@@ -79,7 +107,7 @@ Finally, you should download and install opencv-3.4.0 again
 
 
 
-If you get an error with libGL.so:
+#### If you get an error with libGL.so:
 
 		Built target pch_Generate_opencv_stitching 
 		Scanning dependencies of target opencv_cudev make[2]: 
@@ -93,32 +121,3 @@ The error message says that make is not able to find the file ```/usr/lib/aarch6
 		$ sudo ln -sf libGL.so.1.0.0 /usr/lib/aarch64-linux-gnu/libGL.so
 	
 If you don't find any ```libGL.so.*``` at all, then there's probably something wrong with your Jetson Nano rootfs. In that case, I'd suggest you to re-flash your Jetson Nano system with the latest image from NVIDIA.
-
-
-Test installation:
-
-		$ cd ../test/
-
-	Test opencv on c++ :
-
-		$ g++ read_image.cpp -o app `pkg-config --cflags --libs opencv`
-		$ ./app 
-	
-<img src="results/test_cplusplus.png?raw=true" width="600" height = "200"/>
-
-		$ g++ read_video.cpp -o app `pkg-config --cflags --libs opencv`
-		$ ./app
-	
-<img src="results/result_video_cplus_clpus.png?raw=true" width="600" height = "200"/>
-
-	Test opencv on python3:
-
-		$ python3 read_image.py 
-
-<img src="results/test_python3.png?raw=true" width="600" height = "200"/>
-
-		$ python3 read_video.py 
-
-<img src="results/result_video_python.png?raw=true" width="600" height = "200"/>
-
-	
