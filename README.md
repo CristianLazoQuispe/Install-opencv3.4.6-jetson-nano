@@ -80,7 +80,7 @@ Test installation:
 		#error Please include the appropriate gl headers before including cuda_gl_interop.h
 		
 
-Some changes in ```/usr/local/cuda/include/cuda_gl_interop.h``` to fix the symbolic link of libGL.so.
+You should do some changes in ```/usr/local/cuda/include/cuda_gl_interop.h``` to fix the symbolic link of libGL.so.
 
 		$ sudo vim /usr/local/cuda/include/cuda_gl_interop.h
 
