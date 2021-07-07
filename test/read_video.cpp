@@ -7,8 +7,12 @@ int main(){
 
   // Create a VideoCapture object and open the input file
   // If the input is the web camera, pass 0 instead of the video file name
-  string filename = "filesrc location=video.mp4 ! qtdemux ! queue ! h264parse ! omxh264dec ! nvvidconv ! video/x-raw,format=BGRx ! queue ! videoconvert ! queue ! video/x-raw, format=BGR ! appsink";
-  cv::VideoCapture cap(filename, cv::CAP_GSTREAMER); 
+
+  //string filename = "filesrc location=video.mp4 ! qtdemux ! queue ! h264parse ! omxh264dec ! nvvidconv ! video/x-raw,format=BGRx ! queue ! videoconvert ! queue ! video/x-raw, format=BGR ! appsink";
+  //cv::VideoCapture cap(filename, cv::CAP_GSTREAMER); 
+
+  string filename = "video.mp4";
+  cv::VideoCapture cap(filename); 
    
   // Check if camera opened successfully
   if(!cap.isOpened()){
