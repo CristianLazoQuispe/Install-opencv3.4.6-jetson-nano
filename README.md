@@ -43,12 +43,14 @@ Install opencv
 
 		$ ./install_opencv-3.4.6.sh
 
-### Note: 
-If you have the following errors:
+### Note 
+If you get an error with cuda_gl_interop.h:
 		```
 		/usr/local/cuda-8.0/include/cuda_gl_interop.h:64:2: error: #error Please include the appropriate gl headers before including cuda_gl_interop.h
 		#error Please include the appropriate gl headers before including cuda_gl_interop.h
 		```
+
+If you get an error with libGL.so
 		```
 		Built target pch_Generate_opencv_stitching
 		Scanning dependencies of target opencv_cudev
